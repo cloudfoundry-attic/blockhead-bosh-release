@@ -1,0 +1,5 @@
+---
+name: golang-linux
+
+files:
+  - golang-envs/*
