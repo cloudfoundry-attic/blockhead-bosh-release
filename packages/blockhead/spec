@@ -1,0 +1,14 @@
+---
+name: blockhead
+
+dependencies:
+  - golang-linux
+
+files:
+  - github.com/cloudfoundry-incubator/blockhead/cmd/broker/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/pkg/broker/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/pkg/config/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/code.cloudfoundry.org/lager/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/gorilla/mux/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/pivotal-cf/brokerapi/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/pivotal-cf/brokerapi/auth/*.go # gosub

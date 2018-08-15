@@ -1,0 +1,6 @@
+check process blockhead
+  with pidfile /var/vcap/sys/run/bpm/blockhead/blockhead.pid
+  start program "/var/vcap/jobs/bpm/bin/bpm start blockhead"
+    with timeout 60 seconds
+  stop program "/var/vcap/jobs/bpm/bin/bpm stop blockhead"
+  group vcap

@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e -x -u
+
+wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz 
+tar xzf go1.10.3.linux-amd64.tar.gz 
+
+cp -R go/* ${BOSH_INSTALL_TARGET}
+
+
+mkdir ${BOSH_INSTALL_TARGET}/bosh
+
+cp golang-envs/compile.env.generic ${BOSH_INSTALL_TARGET}/bosh/compile.env.generic
+cp golang-envs/compile.env.linux ${BOSH_INSTALL_TARGET}/bosh/compile.env
+cp golang-envs/runtime.env.linux ${BOSH_INSTALL_TARGET}/bosh/runtime.env

@@ -1,0 +1,50 @@
+---
+name: blockhead
+
+addons:
+- name: bpm
+  jobs:
+  - name: bpm
+    release: bpm
+
+instance_groups:
+- name: broker
+  instances: 1
+  azs: [z1]
+  jobs:
+  - name: blockhead
+    release: blockhead
+    properties:
+      username: admin
+      password: "((blockhead_broker_password))" 
+  vm_type: small
+  stemcell: default
+  networks:
+  - name: default
+
+releases:
+- name: blockhead
+  url: file://<location-of-blockhead-bosh-release>
+  version: create
+- name: bpm
+  sha1: 5e6dbe919749da1b0e844e39f8c8c6dc320395e2
+  stemcell:
+    os: ubuntu-trusty
+    version: "3586.26"
+  url: https://storage.googleapis.com/cf-deployment-compiled-releases/bpm-0.9.0-ubuntu-trusty-3586.26-20180717-183629-856046742.tgz
+  version: 0.9.0
+
+variables:
+- name: blockhead_broker_password
+  type: password
+
+stemcells:
+- alias: default
+  os: ubuntu-trusty
+  version: latest 
+
+update:
+  canaries: 1
+  max_in_flight: 1
+  canary_watch_time: 1000-30000
+  update_watch_time: 1000-30000
