@@ -8,7 +8,7 @@ addons:
     release: bpm
 
 instance_groups:
-- name: blockhead-broker
+- name: broker
   instances: 1
   azs: [z1]
   jobs:
