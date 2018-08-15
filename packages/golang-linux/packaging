@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e -x -u
 
-wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz 
-tar xzf go1.10.3.linux-amd64.tar.gz 
+wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
+tar xzf go1.10.3.linux-amd64.tar.gz
 
 cp -R go/* ${BOSH_INSTALL_TARGET}
 

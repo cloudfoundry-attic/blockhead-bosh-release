@@ -28,7 +28,7 @@ function sync_package() {
   )
 }
 
-sync_package blockhead        -app github.com/cloudfoundry-incubator/blockhead/cmd/...
+sync_package blockhead -app github.com/cloudfoundry-incubator/blockhead/cmd/...
 
 wait
 
