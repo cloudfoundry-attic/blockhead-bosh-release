@@ -24,7 +24,7 @@ instance_groups:
 
 releases:
 - name: blockhead
-  url: file://<location-of-blockhead-bosh-release>
+  url: file://.
   version: create
 - name: bpm
   sha1: 5e6dbe919749da1b0e844e39f8c8c6dc320395e2
