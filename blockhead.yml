@@ -16,7 +16,7 @@ instance_groups:
     release: blockhead
     properties:
       username: admin
-      password: "((blockhead_broker_password))" 
+      password: "((blockhead_broker_password))"
   vm_type: small
   stemcell: default
   networks:
@@ -41,7 +41,7 @@ variables:
 stemcells:
 - alias: default
   os: ubuntu-trusty
-  version: latest 
+  version: latest
 
 update:
   canaries: 1
