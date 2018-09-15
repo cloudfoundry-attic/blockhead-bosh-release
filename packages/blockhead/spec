@@ -8,7 +8,39 @@ files:
   - github.com/cloudfoundry-incubator/blockhead/cmd/broker/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/pkg/broker/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/pkg/config/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/pkg/containermanager/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/pkg/containermanager/docker/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/code.cloudfoundry.org/lager/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/Microsoft/go-winio/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/distribution/digest/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/distribution/reference/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/blkiodev/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/container/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/events/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/filters/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/mount/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/network/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/reference/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/registry/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/strslice/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/swarm/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/time/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/versions/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/volume/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/client/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/pkg/tlsconfig/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/go-connections/nat/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/go-connections/sockets/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/go-connections/tlsconfig/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/go-units/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/gorilla/mux/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/pborman/uuid/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/pivotal-cf/brokerapi/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/pivotal-cf/brokerapi/auth/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/pkg/errors/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/context/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/context/ctxhttp/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/internal/socks/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/proxy/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/sys/windows/*.go # gosub

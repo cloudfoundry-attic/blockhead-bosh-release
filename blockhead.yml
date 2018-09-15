@@ -17,7 +17,17 @@ instance_groups:
     properties:
       username: admin
       password: "((blockhead_broker_password))"
-  vm_type: small
+      port: 3333
+  - name: docker
+    release: docker
+    properties:
+      tcp_address: 0.0.0.0
+      tls_cacert: "((docker_tls.ca))"
+      tls_cert: "((docker_tls.certificate))"
+      tls_key: "((docker_tls.private_key))"
+
+  vm_type: minimal
+  persistent_disk: 65536
   stemcell: default
   networks:
   - name: default
@@ -27,16 +37,29 @@ releases:
   url: file://.
   version: create
 - name: bpm
-  sha1: 5e6dbe919749da1b0e844e39f8c8c6dc320395e2
-  stemcell:
-    os: ubuntu-trusty
-    version: "3586.26"
-  url: https://storage.googleapis.com/cf-deployment-compiled-releases/bpm-0.9.0-ubuntu-trusty-3586.26-20180717-183629-856046742.tgz
-  version: 0.9.0
+  sha1: 313664d2e6d8485ffa0683979a401f7722f63a50
+  url: https://bosh.io/d/github.com/cloudfoundry-incubator/bpm-release?v=0.12.3
+  version: 0.12.3
+- name: docker
+  url: https://bosh.io/d/github.com/cf-platform-eng/docker-boshrelease?v=32.0.0
+  version: 32.0.0
+  sha1: 75a3e4f85f8d1a59b58c6b34cf568f72397b5680
 
 variables:
 - name: blockhead_broker_password
   type: password
+- name: docker_ca
+  type: certificate
+  options:
+    is_ca: true
+    common_name: dockerCA
+- name: docker_tls
+  type: certificate
+  options:
+    ca: docker_ca
+    common_name: docker
+    extended_key_usage:
+    - client_auth
 
 stemcells:
 - alias: default

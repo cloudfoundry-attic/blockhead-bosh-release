@@ -6,6 +6,7 @@ description: "Blockhead Broker that deploys and manages blockhain nodes"
 templates:
   blockhead-config.json.erb: config/blockhead-config.json
   bpm.yml.erb: config/bpm.yml
+  eth.json.erb: config/services/eth.json
 
 packages:
   - blockhead
@@ -15,3 +16,5 @@ properties:
     description: "Username for Blockhead broker"
   password:
     description: "Password for Blockhead broker"
+  port:
+    description: "Port for Blockhead broker to run on"
