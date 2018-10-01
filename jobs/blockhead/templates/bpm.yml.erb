@@ -4,3 +4,8 @@ processes:
   executable: /var/vcap/packages/blockhead/bin/blockhead
   args:
   - /var/vcap/jobs/blockhead/config/blockhead-config.json
+  - /var/vcap/packages/blockhead/services
+  env:
+    DOCKER_HOST: unix:///var/vcap/data/sys/run/docker/docker.sock
+  additional_volumes:
+  - path: /var/vcap/data/sys/run/docker

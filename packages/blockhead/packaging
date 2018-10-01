@@ -13,3 +13,4 @@ popd
 
 chmod +x "${BOSH_INSTALL_TARGET}/bin/blockhead"
 
+cp -r services "${BOSH_INSTALL_TARGET}"

@@ -15,3 +15,6 @@ properties:
     description: "Username for Blockhead broker"
   password:
     description: "Password for Blockhead broker"
+  port:
+    description: "Port for Blockhead broker to run on"
+    default: 3333
