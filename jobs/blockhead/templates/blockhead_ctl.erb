@@ -1,0 +1,7 @@
+#!/bin/bash 
+
+export PATH=/var/vcap/packages/node-linux/bin:$PATH 
+
+/var/vcap/packages/blockhead/bin/blockhead \
+/var/vcap/jobs/blockhead/config/blockhead-config.json \
+/var/vcap/packages/blockhead/services 
