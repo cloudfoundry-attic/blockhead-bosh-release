@@ -1,11 +1,9 @@
 ---
 processes:
 - name: blockhead
-  executable: /var/vcap/packages/blockhead/bin/blockhead
-  args:
-  - /var/vcap/jobs/blockhead/config/blockhead-config.json
-  - /var/vcap/packages/blockhead/services
+  executable: /var/vcap/jobs/blockhead/bin/blockhead_ctl
   env:
     DOCKER_HOST: unix:///var/vcap/data/sys/run/docker/docker.sock
+    NODE_PATH: /var/vcap/packages/node-linux/node_modules
   additional_volumes:
   - path: /var/vcap/data/sys/run/docker

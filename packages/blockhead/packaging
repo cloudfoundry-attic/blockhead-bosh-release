@@ -2,15 +2,17 @@ set -ex
 
 source /var/vcap/packages/golang-linux/bosh/compile.env
 
-mkdir -p "${BOSH_INSTALL_TARGET}/bin"
-mkdir -p "${GOPATH}/src"
+mkdir -p ${BOSH_INSTALL_TARGET}/bin
+mkdir -p ${GOPATH}/src
 
-mv github.com "${GOPATH}/src"
+mv github.com ${GOPATH}/src
 
 pushd ${GOPATH}/src/github.com/cloudfoundry-incubator/blockhead/cmd/broker
-  go build -o "${BOSH_INSTALL_TARGET}/bin/blockhead" .
+  go build -o ${BOSH_INSTALL_TARGET}/bin/blockhead .
 popd
 
-chmod +x "${BOSH_INSTALL_TARGET}/bin/blockhead"
+chmod +x ${BOSH_INSTALL_TARGET}/bin/blockhead
 
-cp -r services "${BOSH_INSTALL_TARGET}"
+cp -r services ${BOSH_INSTALL_TARGET}
+mkdir -p ${BOSH_INSTALL_TARGET}/deployer
+cp -r src/github.com/cloudfoundry-incubator/blockhead/pusher.js ${BOSH_INSTALL_TARGET}/deployer

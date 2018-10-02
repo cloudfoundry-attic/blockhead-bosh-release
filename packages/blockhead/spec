@@ -6,13 +6,17 @@ dependencies:
 
 files:
   - services/*.json
+  - github.com/cloudfoundry-incubator/blockhead/pusher.js
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/modern-go/reflect2/* # need *.s and *.go files
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/sys/unix/* # need *.s and *.go files
   - github.com/cloudfoundry-incubator/blockhead/cmd/broker/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/pkg/broker/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/pkg/config/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/pkg/containermanager/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/pkg/containermanager/docker/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/pkg/containermanager/kubernetes/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/pkg/deployer/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/code.cloudfoundry.org/lager/*.go # gosub
-  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/Microsoft/go-winio/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/distribution/digest/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/distribution/reference/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/docker/api/types/*.go # gosub
@@ -35,13 +39,156 @@ files:
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/go-connections/sockets/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/go-connections/tlsconfig/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/docker/go-units/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/ghodss/yaml/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/gogo/protobuf/proto/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/gogo/protobuf/sortkeys/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/golang/glog/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/golang/protobuf/proto/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/golang/protobuf/ptypes/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/golang/protobuf/ptypes/any/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/golang/protobuf/ptypes/duration/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/golang/protobuf/ptypes/timestamp/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/google/btree/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/google/gofuzz/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/googleapis/gnostic/OpenAPIv2/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/googleapis/gnostic/compiler/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/googleapis/gnostic/extensions/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/gorilla/mux/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/gregjones/httpcache/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/gregjones/httpcache/diskcache/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/json-iterator/go/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/modern-go/concurrent/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/modern-go/reflect2/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/pborman/uuid/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/peterbourgon/diskv/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/pivotal-cf/brokerapi/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/pivotal-cf/brokerapi/auth/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/github.com/pkg/errors/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/crypto/ssh/terminal/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/context/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/context/ctxhttp/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/http/httpguts/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/http2/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/http2/hpack/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/idna/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/internal/socks/*.go # gosub
   - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/net/proxy/*.go # gosub
-  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/sys/windows/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/sys/unix/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/text/secure/bidirule/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/text/transform/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/text/unicode/bidi/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/text/unicode/norm/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/golang.org/x/time/rate/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/gopkg.in/inf.v0/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/gopkg.in/yaml.v2/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/admissionregistration/v1alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/admissionregistration/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/apps/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/apps/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/apps/v1beta2/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/authentication/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/authentication/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/authorization/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/authorization/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/autoscaling/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/autoscaling/v2beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/batch/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/batch/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/batch/v2alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/certificates/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/core/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/events/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/extensions/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/networking/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/policy/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/rbac/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/rbac/v1alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/rbac/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/scheduling/v1alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/scheduling/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/settings/v1alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/storage/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/storage/v1alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/api/storage/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/api/errors/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/api/meta/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/api/resource/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/apis/meta/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/apis/meta/v1/unstructured/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/apis/meta/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/conversion/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/conversion/queryparams/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/fields/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/labels/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/runtime/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/runtime/schema/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/runtime/serializer/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/runtime/serializer/json/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/runtime/serializer/protobuf/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/runtime/serializer/recognizer/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/runtime/serializer/streaming/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/runtime/serializer/versioning/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/selection/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/types/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/clock/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/errors/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/framer/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/intstr/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/json/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/net/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/runtime/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/sets/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/validation/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/validation/field/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/wait/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/util/yaml/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/version/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/pkg/watch/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/apimachinery/third_party/forked/golang/reflect/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/discovery/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/scheme/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/admissionregistration/v1alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/admissionregistration/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/apps/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/apps/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/apps/v1beta2/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/authentication/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/authentication/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/authorization/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/authorization/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/autoscaling/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/autoscaling/v2beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/batch/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/batch/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/batch/v2alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/certificates/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/core/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/events/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/extensions/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/networking/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/policy/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/rbac/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/rbac/v1alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/rbac/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/scheduling/v1alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/scheduling/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/settings/v1alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/storage/v1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/storage/v1alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/kubernetes/typed/storage/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/pkg/apis/clientauthentication/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/pkg/apis/clientauthentication/v1alpha1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/pkg/apis/clientauthentication/v1beta1/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/pkg/version/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/plugin/pkg/client/auth/exec/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/rest/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/rest/watch/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/tools/clientcmd/api/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/tools/metrics/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/tools/reference/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/transport/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/util/cert/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/util/connrotation/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/util/flowcontrol/*.go # gosub
+  - github.com/cloudfoundry-incubator/blockhead/vendor/k8s.io/client-go/util/integer/*.go # gosub

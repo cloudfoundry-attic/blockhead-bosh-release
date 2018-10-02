@@ -6,9 +6,11 @@ description: "Blockhead Broker that deploys and manages blockhain nodes"
 templates:
   blockhead-config.json.erb: config/blockhead-config.json
   bpm.yml.erb: config/bpm.yml
+  blockhead_ctl.erb: bin/blockhead_ctl
 
 packages:
   - blockhead
+  - node-linux
 
 properties:
   username:

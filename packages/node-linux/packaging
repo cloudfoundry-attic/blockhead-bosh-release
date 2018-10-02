@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e -x -u
+
+
+wget https://nodejs.org/download/release/v9.11.2/node-v9.11.2-linux-x64.tar.gz 
+tar -xf node-v9.11.2-linux-x64.tar.gz
+
+cp -R node-v9.11.2-linux-x64/bin ${BOSH_INSTALL_TARGET}/bin
+
+chmod +x node-v9.11.2-linux-x64/bin/npm
+
+export PATH=$PATH:$PWD/node-v9.11.2-linux-x64/bin
+
+#Need git for npm
+apt-get install -y git
+
+#Need to install python for web3 since node-gyp is used 
+wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tgz
+tar -xzf Python-2.7.11.tgz
+pushd Python-2.7.11
+  ./configure  
+  make  
+  make install
+popd
+
+npm install --production --quiet --prefix ${BOSH_COMPILE_TARGET}/cli-flags cli-flags@2.0.7
+npm install --production --quiet --prefix ${BOSH_COMPILE_TARGET}/web3 web3@1.0.0-beta.34
+npm install --production --quiet --prefix ${BOSH_COMPILE_TARGET}/solc solc@0.4.22 
+
+mkdir ${BOSH_INSTALL_TARGET}/node_modules
+cp -ra ${BOSH_COMPILE_TARGET}/cli-flags/node_modules/* ${BOSH_INSTALL_TARGET}/node_modules
+cp -ra ${BOSH_COMPILE_TARGET}/web3/node_modules/* ${BOSH_INSTALL_TARGET}/node_modules
+cp -ra ${BOSH_COMPILE_TARGET}/solc/node_modules/* ${BOSH_INSTALL_TARGET}/node_modules
