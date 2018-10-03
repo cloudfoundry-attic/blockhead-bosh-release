@@ -5,7 +5,7 @@
     port: p("port"),
     deployer_path: "/var/vcap/packages/blockhead/deployer/pusher.js",
     container_manager: "docker",
-    external_ip: spec.address,
+    external_ip: spec.ip,
   }
 
   config.to_json
